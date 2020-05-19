@@ -62,7 +62,8 @@ BEGIN
    BEGIN
 
       --! reset all output signals of FSM 
-      --! set FSM to inital state
+      --! set FSM to inital state         out1 <= a;
+      
       IF reset = '0' THEN                  -- Reset (async).
          current_state <= state_1;
       ELSIF rising_edge(clk) THEN
@@ -124,7 +125,7 @@ BEGIN
          WHEN state_3 =>
             output <= "0011";
             
-         WHEN OTHERS    =>
+         WHEN OTHERS  =>
             output <= "1111";
             
       END CASE;
