@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off fsm_example -c fsm_example --vector_source="C:/intelFPGA_lite/HAN_LOGCIR/DE10-Lite/e-esh-soc/fsm_example/Waveform.vwf" --testbench_file="C:/intelFPGA_lite/HAN_LOGCIR/DE10-Lite/e-esh-soc/fsm_example/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off fsm_example -c fsm_example --vector_source="C:/intelFPGA_lite/HAN_LOGCIR/DE10-Lite/e-esh-soc/fsm_example/Waveform.vwf" --testbench_file="C:/intelFPGA_lite/HAN_LOGCIR/DE10-Lite/e-esh-soc/fsm_example/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/intelFPGA_lite/HAN_LOGCIR/DE10-Lite/e-esh-soc/fsm_example/simulation/qsim/" fsm_example -c fsm_example</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/intelFPGA_lite/HAN_LOGCIR/DE10-Lite/e-esh-soc/fsm_example/simulation/qsim/" fsm_example -c fsm_example</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off fsm_example -c fsm_example --vector_source="C:/intelFPGA_lite/han-soc-examples/example_fsm_tb/Waveform.vwf" --testbench_file="C:/intelFPGA_lite/han-soc-examples/example_fsm_tb/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off fsm_example -c fsm_example --vector_source="C:/intelFPGA_lite/han-soc-examples/example_fsm_tb/Waveform.vwf" --testbench_file="C:/intelFPGA_lite/han-soc-examples/example_fsm_tb/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/intelFPGA_lite/han-soc-examples/example_fsm_tb/simulation/qsim/" fsm_example -c fsm_example</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/intelFPGA_lite/han-soc-examples/example_fsm_tb/simulation/qsim/" fsm_example -c fsm_example</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work fsm_example.vho
@@ -20,7 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,7 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -360,7 +358,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "output";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Unsigned;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 0;
