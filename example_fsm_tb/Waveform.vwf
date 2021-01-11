@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -307,12 +309,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "input";
-	EXPAND_STATUS = EXPANDED;
-	RADIX = Unsigned;
+	CHANNEL = "reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
-	CHILDREN = 2, 3, 4, 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "input";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+	CHILDREN = 3, 4, 5, 6;
 }
 
 DISPLAY_LINE
@@ -320,9 +331,9 @@ DISPLAY_LINE
 	CHANNEL = "input[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 2;
+	TREE_INDEX = 3;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -330,9 +341,9 @@ DISPLAY_LINE
 	CHANNEL = "input[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 3;
+	TREE_INDEX = 4;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -340,9 +351,9 @@ DISPLAY_LINE
 	CHANNEL = "input[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 4;
+	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -350,19 +361,19 @@ DISPLAY_LINE
 	CHANNEL = "input[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 5;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "output";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 6;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 0;
-	CHILDREN = 7, 8, 9, 10;
+	CHILDREN = 8, 9, 10, 11;
 }
 
 DISPLAY_LINE
@@ -370,9 +381,9 @@ DISPLAY_LINE
 	CHANNEL = "output[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 7;
+	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 7;
 }
 
 DISPLAY_LINE
@@ -380,9 +391,9 @@ DISPLAY_LINE
 	CHANNEL = "output[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 8;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 7;
 }
 
 DISPLAY_LINE
@@ -390,9 +401,9 @@ DISPLAY_LINE
 	CHANNEL = "output[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 9;
+	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
-	PARENT = 6;
+	PARENT = 7;
 }
 
 DISPLAY_LINE
@@ -400,23 +411,14 @@ DISPLAY_LINE
 	CHANNEL = "output[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
-	TREE_INDEX = 10;
-	TREE_LEVEL = 1;
-	PARENT = 6;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "reset";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
 	TREE_INDEX = 11;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 7;
 }
 
 TIME_BAR
 {
-	TIME = 710000;
+	TIME = 230000;
 	MASTER = TRUE;
 }
 ;

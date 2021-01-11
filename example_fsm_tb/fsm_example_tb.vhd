@@ -68,13 +68,13 @@ BEGIN
    -- =========== START ADDED CODE ===========
       
       -- Initial settings
-      input <= "0000";
+      input <= "0000"; -- 0 
       -- reset
-      reset <= '0';
+      reset <= '0'; 
       WAIT FOR 140 ns;
       reset <= '1';
 
-      WAIT FOR 230 ns;
+      WAIT FOR 90 ns;   -- 
       input <= "0001";  -- 1
       
       WAIT FOR 190 ns;  -- to set at 420 ns: 420-230=190 ns to wait!
