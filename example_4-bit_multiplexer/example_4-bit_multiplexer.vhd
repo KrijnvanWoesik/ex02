@@ -34,11 +34,11 @@ BEGIN
    
    --! Selector of input_0 to input_3.
    WITH selector SELECT
-      output <= input_0  WHEN "00", -- input 0 
-                input_1  WHEN "01", -- input 1 
-                input_2  WHEN "10", -- input 2 
-                input_3  WHEN "11", -- input 3 
-                '0' WHEN OTHERS;    -- off in all other cases
+      output <= input_0  WHEN "00",   -- input 0 
+                input_1  WHEN "01",   -- input 1 
+                input_2  WHEN "10",   -- input 2 
+                input_3  WHEN "11",   -- input 3 
+                '0'      WHEN OTHERS; -- off in all other cases
    
 END implementation;
 --------------------------------------------------------------------
