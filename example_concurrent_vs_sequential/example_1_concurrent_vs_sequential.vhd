@@ -31,10 +31,11 @@ END example_1_concurrent_vs_sequential;
 --! uncomment "FOR <ARCHITECTURE>" to select the ARCHITECTURE
 
 CONFIGURATION which_architecture OF example_1_concurrent_vs_sequential IS
---   FOR sequential_if_then     --! SEQUENTIAL logic using IF THEN
---   FOR sequential_switch_case --! SEQUENTIAL logic using SWITCH-CASE
---   FOR concurrent_if_then     --! CONCURRENT logic using IF-THEN
-   FOR concurrent_switch_case --! CONCURRENT logic using SWITCH-CASE
+--   FOR sequential_if_then     				   --! SEQUENTIAL logic using IF THEN
+   FOR sequential_switch_case 					--! SEQUENTIAL logic using SWITCH-CASE
+--   FOR concurrent_if_then_inferred_latch   --! CONCURRENT logic using IF-THEN
+--   FOR concurrent_if_then                  --! CONCURRENT logic using IF-THEN
+--   FOR concurrent_switch_case              --! CONCURRENT logic using SWITCH-CASE
    END FOR;
 END CONFIGURATION;
 --------------------------------------------------------------------
@@ -83,7 +84,7 @@ BEGIN
 
 END sequential_switch_case;
 --------------------------------------------------------------------
-ARCHITECTURE concurrent_if_then OF example_1_concurrent_vs_sequential IS
+ARCHITECTURE concurrent_if_then_inferred_latch OF example_1_concurrent_vs_sequential IS
 
 BEGIN
 
@@ -91,6 +92,17 @@ BEGIN
            b WHEN sel="01" ELSE
            c WHEN sel="10" ELSE
            d WHEN sel="11";
+
+END concurrent_if_then_inferred_latch;
+--------------------------------------------------------------------
+ARCHITECTURE concurrent_if_then OF example_1_concurrent_vs_sequential IS
+
+BEGIN
+
+   out1 <= a WHEN sel="00" ELSE
+           b WHEN sel="01" ELSE
+           c WHEN sel="10" ELSE
+           d ;
 
 END concurrent_if_then;
 --------------------------------------------------------------------
