@@ -10,7 +10,7 @@
 --!
 --! Nr:    |Date:      |Author: |Remarks:
 --! -------|-----------|--------|-----------------------------------
---! 001    |1-4-2020   |WLGRW   |Initial version fro release
+--! 001    |1-4-2020   |WLGRW   |Initial version for release
 --!
 --------------------------------------------------------------------
 LIBRARY ieee;
