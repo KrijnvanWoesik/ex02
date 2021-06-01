@@ -17,13 +17,13 @@
 --! 
 --! \verbatim
 --!
---!        +----------+
---!        |          |
---!        |  0-to-9  |   
---! clk -->| counter  |-----> clk/4 with a 25% duty cycle
---!        |          |
---!        |          |
---!        +----------+
+--!        +-----------+
+--!        |           |
+--!        |   pulse   |   
+--! clk -->| generator |-----> signal with a 25% duty cycle
+--!        |           |
+--!        |           |
+--!        +-----------+
 --! 
 --! \endverbatim
 
