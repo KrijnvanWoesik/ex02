@@ -1,9 +1,9 @@
 --------------------------------------------------------------------
 -- Name of File:   ch02_exc02_1_when_right.vhd
 -- Version/Date:   see top of 'Version History'
--- Description:   Exercize 2.1 of Pedroni 2nd Ed, page 20 using CASE
+-- Description:    Exercize 2.1 of Pedroni 2nd Ed, page 20 using CASE
 -- Author:         Remko Welling (remko.welling@han.nl)
--- Company:         HAN TF ELT/ESE Arnhem 
+-- Company:        HAN TF ELT/ESE Arnhem 
 --
 -- Version History:
 -- Nr:      Date:       Author:     Remarks:
