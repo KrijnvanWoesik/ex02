@@ -79,8 +79,8 @@ ARCHITECTURE delay_line OF ch04_exm04_4 IS
    SIGNAL    a:    STD_LOGIC;
    SIGNAL    b:    STD_LOGIC;
    SIGNAL    c:    STD_LOGIC;
---   ATTRIBUTE keep: BOOLEAN;
---   ATTRIBUTE keep OF a, b, c: SIGNAL IS TRUE;
+   ATTRIBUTE keep: BOOLEAN;
+   ATTRIBUTE keep OF a, b, c: SIGNAL IS TRUE;
 BEGIN
    a <= NOT x;
    b <= NOT a;
