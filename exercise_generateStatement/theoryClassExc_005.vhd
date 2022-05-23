@@ -55,8 +55,8 @@ END ENTITY;
 --! uncomment the architecture you want to use/compile.
 ------------------------------------------------------------------
 CONFIGURATION which_architecture OF theoryClassExc_005 IS
---   FOR arch1   -- Architecture using GENERATE
-   FOR arch2   -- Architecture not using GENERATE
+   FOR arch1   -- Architecture using GENERATE
+--   FOR arch2   -- Architecture not using GENERATE
    END FOR;
 END CONFIGURATION;
 ----------------------------------------------------------------
@@ -64,15 +64,15 @@ ARCHITECTURE arch1 OF theoryClassExc_005 IS
 --   SIGNAL a, b, x: BIT_VECTOR(7 DOWNTO 0);
 BEGIN
 
-   -- example 1 ----------------------------------
-   gen: FOR i IN 0 TO 7 GENERATE
-      x(i) <= a(i) XOR b(7-i);
-   END GENERATE;
-   
-   -- example 2 ----------------------------------
---   gen: FOR i IN a'RANGE GENERATE
+--   -- example 1 ----------------------------------
+--   gen: FOR i IN 0 TO 7 GENERATE
 --      x(i) <= a(i) XOR b(7-i);
 --   END GENERATE;
+   
+   -- example 2 ----------------------------------
+   gen: FOR i IN a'RANGE GENERATE
+      x(i) <= a(i) XOR b(7-i);
+   END GENERATE;
 
    -- example 3 ----------------------------------
 --   gen: FOR i IN a'REVERSE_RANGE GENERATE

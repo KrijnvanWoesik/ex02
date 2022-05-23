@@ -26,19 +26,19 @@ ENTITY example_concurrent_sequential IS
 END example_concurrent_sequential;
 --------------------------------------------------------------------
 ARCHITECTURE behavioural OF example_concurrent_sequential IS
-	SIGNAL c, 
-	       d : STD_LOGIC := '0';
+   SIGNAL c, 
+          d : STD_LOGIC := '0';
 BEGIN
 
-	c      <= a XOR b;
-	output <= NOT (NOT d); -- NOT because of negative logic LED
+   c      <= a XOR b;
+   output <= NOT (NOT d); -- NOT because of negative logic LED
 
-	PROCESS(Clk)
-	BEGIN 
-		IF(rising_edge(Clk)) THEN
-			d <= c; 
-		END IF;
-	END PROCESS;  
+   PROCESS(Clk)
+   BEGIN 
+      IF(rising_edge(Clk)) THEN
+         d <= c; 
+      END IF;
+   END PROCESS;  
 
 END behavioural;
 --------------------------------------------------------------------
