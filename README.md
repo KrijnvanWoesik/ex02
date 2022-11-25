@@ -1,6 +1,11 @@
-# HAN SOC Examples
+# HAN SOC Examples for DE10-Lite
+VHDL examples for use in SOC class at HAN University of applied Science, Academy for Engineering and Automotive, Embedded Systems Engineering.
 
-VHDL examples for use in SOC class
+# Board support
+All projects in this template are configured for the TerasIC Altera DE10-Lite FPGA prototype board.
+
+## DE0-CV
+Because of chip shortage the TerasIC Altera DE0-CV FPGA prototype board had to be reinstated to it's former glory. Therfore some projects may contain a folder named DE10-CV with a project for usage with this board.
 
 ## Responsible disclosure 
 Students and lecturers are encouraged to send in their experiences, problems, errors, any other observation while using this repository. Please send your feedback to one of the lecturers, by raising an issue with this repository, so we can improve this paper. Thank you.
