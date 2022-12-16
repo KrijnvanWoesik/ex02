@@ -71,8 +71,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 ------------------------------------------------------------------
 ENTITY ch04_exm04_4 IS
-PORT (x: IN  STD_LOGIC;
-      y: OUT STD_LOGIC);
+   PORT (
+      x: IN  STD_LOGIC;
+      y: OUT STD_LOGIC
+   );
 END ENTITY;
 ----------------------------------------------------------------
 ARCHITECTURE delay_line OF ch04_exm04_4 IS
